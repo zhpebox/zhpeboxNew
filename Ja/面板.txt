@@ -1,0 +1,59 @@
+import java.awt.*;
+public class TExt{
+	
+	public static void main(String args[]){
+		 Frame F = new Frame ("登陆");
+		 F.setSize(400,300);
+		 F.setLayout(new FlowLayout());
+		 
+		 Button H = new Button("用户");
+		 TextField yong = new TextField();
+		 Panel ps = new Panel();
+		 ps.add(H);
+		 ps.add(yong);
+		 
+		 Button R = new Button("密码");
+		 TextField  R1= new TextField();
+		 R1.setEchoChar('*');
+		 Panel pn = new Panel();
+		 pn.add(R);
+		 pn.add(R1);
+		  
+		 Button Ok = new Button("OK");
+		 Button Cancel = new Button("cancel");
+		 
+		 Label  sex = new Label("Sex");				//下拉列表
+		 Choice sexT = new Choice();
+		 sexT.addItem("男");
+		 sexT.addItem("女");
+		 
+		 Panel pa = new Panel();
+		
+		 CheckboxGroup degree = new CheckboxGroup();	       //多选（圆点框）
+		 pa.add(new Label("degree"));
+		 pa.add(new Checkbox("大学",degree,true));
+		 pa.add(new Checkbox("高中",degree,true));
+		 pa.add(new Checkbox("初中",degree,false));
+		 
+		 Panel pa1 = new Panel();					//多选（方框）
+		 pa1.add(new Label ("laugrage"));
+		 pa1.add(new Checkbox("java"));
+		 pa1.add(new Checkbox("C++"));
+		 pa1.add(new Checkbox("vB"));
+		 
+	 	 F.add(ps);
+
+		 F.add(pn);
+		
+		 F.add(Ok);
+		 F.add(Cancel);
+		 F.add(sex);
+		 F.add(sexT);
+		 F.add(pa);
+		 F.add(pa1);
+		 
+		 
+		 F.setVisible(true);
+		}
+	
+	}

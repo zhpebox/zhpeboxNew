@@ -1,0 +1,21 @@
+public class Jha{
+	
+public static void main(String[] args){
+		int x = 1;
+		int a = 1357;
+		int b = -1357;
+		int s = a>>5;
+		for(int i=0;i<32;i++)
+		{
+			int bit = (s>>>i)&x;
+			System.out.print(bit);
+		}
+		System.out.println();
+		for(int i=0;i<32;i++)
+		{
+			int bit = (b>>>i)&x;
+			System.out.print(bit);
+			
+		}System.out.println();
+	}
+}

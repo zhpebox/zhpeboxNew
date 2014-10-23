@@ -1,0 +1,24 @@
+public class qwe {
+	
+
+	public static void main(String[] args) 
+	{
+	
+	    	double h=10,t=3.5;
+	    	double dt=Math.sqrt(2*h/10.0);
+	    	double T=2*dt;
+	    	t=t%T;
+	    	if(t>dt)
+	    	{t=t-dt;}
+	    	double s=0.5*10.0*t*t;
+	    	
+			h=h-s;
+			System.out.println(h); 
+
+			}
+	
+		
+
+
+	}	
+

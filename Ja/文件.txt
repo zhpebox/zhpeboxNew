@@ -1,0 +1,25 @@
+import java.io.*;
+class hello{
+	
+	public static void main(String[] args){
+	
+		long S = System.currentTimeMillis();
+		try{	
+				
+				FileInputStream input = new FileInputStream("F:\\a.txt");
+				FileOutputStream output = new FileOutputStream("F:\\b.txt");
+			//	BufferedInputStream input = new BufferedInputStream(in);
+			//	BufferedOutputStream output = new BufferedOutputStream (out);
+				while(input.available()>0)
+				{byte[] Buffer = new byte[4096];
+				int length = input.read(Buffer);
+				output.write(Buffer,0,length);
+			//	int value = input.read();
+			//		output.write(value);
+					} 
+				long C = System.currentTimeMillis() - S;
+				System.out.println(C);
+			}catch(Exception e ){System.out.print(e);}
+	
+	}
+}

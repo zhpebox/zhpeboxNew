@@ -1,0 +1,17 @@
+
+public class Jha {
+
+	
+	public static void main(String[] args) {
+		char s = 'Äã';
+		int x = 1;
+		for(int i=0;i<16;i++)
+		{
+			int bit = (s>>>i)&x;
+			System.out.println(bit);
+		}
+		
+
+	}
+
+}

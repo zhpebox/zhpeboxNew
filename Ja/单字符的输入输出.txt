@@ -1,0 +1,14 @@
+import java.io.*;
+ public class Jha{
+ 	public  static void main(String[] args){
+ 	char c=' ';
+ 	System.out.println("ÊäÈëÒ»¸ö×Ö·û£º");
+ 	 try{
+ 	 	c = (char)System.in.read();
+ 	 	
+ 	 	}catch(Exception e){System.out.println(e.toString());}
+ 	 	
+ 	 System.out.println(c);
+ 	 
+ }
+ }  

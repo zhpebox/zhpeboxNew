@@ -1,0 +1,34 @@
+
+class Jcricle implements Areable{
+	
+		public	double area()				//注意public
+		{
+				return 2.2;
+			}
+			
+	} 
+interface  Areable{
+	public	abstract double area();				//注意定义！！area();  //注意public
+		}
+class House implements Areable{
+		public double area(){					//注意public
+			
+			return 1.1;
+			
+			}
+	}
+public class asdfg {
+	static void showArea(Areable a)
+	{ System.out.println(a.area());}
+	public static void main(String[] args) {
+		Jcricle a=new Jcricle();
+		System.out.println(a.area());
+		House b=new House();
+		System.out.println(b.area());;
+		
+	}	
+}
+
+
+
+接口，类中的函数都应是public  

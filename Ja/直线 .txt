@@ -1,0 +1,40 @@
+ class Jpoint{
+	int x = 0;
+	int y = 0;
+	Jpoint(int x ,int y)
+	{	this.x = x;
+		this.y = y;
+		}
+	
+	public String toString(){
+	
+		return"("+x+","+y+")";
+	}
+	}
+public class asdfasd {
+	  Jpoint P1;
+	  Jpoint P2;
+	  public asdfasd(Jpoint P1, Jpoint P2)
+	  {
+	  	this.P1 = P1;
+	  	this.P2 = P2;
+	  	}
+	 public String toString(){
+	 	double k;
+	 	double b;
+	 	 if(P1.x == P2.x)
+	 	 	return "x="+P1.x;
+	 	 k = (P1.y-P2.y)/(P1.x-P2.x);
+	 	 b = P1.y-k*P1.x;
+	 	 return "y="+k+"*x"+b;
+	 	} 	
+	  	
+	public static void main(String[] args) {
+		
+		Jpoint P1 = new Jpoint(1,1);
+		Jpoint P2 = new Jpoint(1,2);
+		
+		asdfasd L = new asdfasd(P1,P2);
+		System.out.println(L.toString());		 
+	}	
+}

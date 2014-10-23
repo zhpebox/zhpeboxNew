@@ -1,0 +1,27 @@
+
+import java.io.*;
+public class TextIO {
+	
+
+	public static void main(String[] args) {
+		long start = System.currentTimeMillis();
+		try{
+			FileInputStream in = new FileInputStream("C:\\a.txt");
+			FileOutputStream out = new FileOutputStream("D:\\b.txt");
+
+        //Buffered是套接用的
+			BufferedInputStream input = new BufferedInputStream(in);
+			BufferedOutputStream output = new BufferedOutputStream(out);
+			while(input.available()>0)
+			{	int value=input.read();
+				output.write(value);
+				}
+				input.close();
+				output.close();
+		}catch(Exception e)
+		{	System.out.println(e.toString());}
+		
+		long cost = System.currentTimeMillis()-start;
+		System.out.println(cost);
+	}	
+}

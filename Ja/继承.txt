@@ -1,0 +1,32 @@
+class Jpoint{
+	int x=0;
+	int y=0;
+	Jpoint(int x,int y)
+	{	this.x=x;
+		this.y=y; 
+	}
+	
+}
+class circle extends Jpoint{
+	double r=0.0;
+	static final double  PI=3.14;
+	double s=PI*r*r;
+	double l=2*PI*r;
+	circle(int x,int y,double r)
+	{ super(x,y);				//×¢Òâ£¡£¡£¡Jha(int x,int y,double r)
+	{
+		super.x=x;
+		super.y = y;
+		this.r = r;
+	}
+		this.r=r;
+	}
+	public String tostring()
+	{	return "("+x+","+y+")";}
+		public static void main(String[] args){
+	circle a=new circle(5,2,5.0);
+	System.out.println(a.tostring());
+	}
+	
+	}
+	
