@@ -1,0 +1,46 @@
+import java.io.*;
+public class Jha{
+	public String se ;
+	public String to(){
+		//将输入的String变为char数组
+		String sr = "";
+		//件数组的长度变为3的倍数
+		while( se.length() %3 != 0){
+			se = "0" + se;
+		}
+		char[] cz = se.toCharArray();
+		//每三位进行转置
+		for(int i = 0;i<cz.length;i+=3){
+			char[] cm = new char[3];
+			System.arraycopy(cz,i,cm,0,3);
+			String ss = "";
+			for(char e : cm){
+			ss = ss + e;
+		}
+		
+		if (ss.equals("000")) ss = "0";
+		if (ss.equals("001")) ss = "1";
+		if (ss.equals("010")) ss = "2";
+		if (ss.equals("011")) ss = "3";
+		if (ss.equals("100")) ss = "4";
+		if (ss.equals("101")) ss = "5";
+		if (ss.equals("110")) ss = "6";
+		if (ss.equals("111")) ss = "7";
+		
+		sr = sr + ss;
+		}
+		return sr;
+	}
+	
+	public static void main(String args[])throws Exception{
+		System.out.println("该程序为二进制到八进制的转置");
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		Jha a = new Jha();
+		System.out.println("输入一个二进制数 ：");
+		a.se =br.readLine();
+		System.out.println("转为八进制为  ：");
+		System.out.println(a.to());
+		
+		
+	}
+}

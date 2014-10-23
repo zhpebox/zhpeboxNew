@@ -1,0 +1,21 @@
+import java.awt.*;
+import javax.swing.*;
+
+public class Jha{
+
+	public static void main(String args[]){
+	
+		fam f = new fam();
+		f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		f.setSize(300,200);
+		f.setVisible(true);
+	}
+}
+
+class fam extends JFrame{
+
+	fam(){
+	
+		setSize(200,400);
+	}
+}

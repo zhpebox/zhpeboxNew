@@ -1,0 +1,37 @@
+import java.io.*;
+public class Jha{
+	
+	void zhishu(int t){
+	
+		if(t<2){
+			System.out.println("该数不能分解");
+		}
+		if(t==2){
+			System.out.println("t = "+t);
+		}
+		if(t>2){
+			System.out.print("n = ");
+		for(int i = 2;i<=t;i++){
+		
+			if(t%i==0){
+				t=t/i;
+				if(t==1)
+				System.out.print(i);
+				else
+				System.out.print(i+"* ");
+				i--;
+			}
+			
+		}
+		}
+	}
+	
+	public static void main(String args[]) throws Exception{
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		Jha m = new Jha();
+		System.out.println("输入一个数");
+		int i = Integer.parseInt(br.readLine());
+		m.zhishu(i);
+		
+	}
+}

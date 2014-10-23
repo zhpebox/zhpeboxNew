@@ -1,0 +1,32 @@
+ /**【程序1】 
+
+
+  *题目：古典问题：有一对兔子，从出生后第3个月起每个月都生一对兔子，小兔子长到第三个月后每个月又生一
+  *对兔子，假如兔子都不死，问每个月的兔子总数为多少？ 
+  *1.程序分析： 兔子的规律为数列1,1,2,3,5,8,13,21.... 
+
+
+ */
+import java.io.*;
+ public class Jha{
+ 	 public static int t1(int n){
+ 	 
+ 	 	 if(n > 2){
+ 	 	 	 return t1(n-1)+t1(n-2);
+ 	 	 }
+ 	 	 else{
+ 	 	 	 return 1;
+ 	 	 }
+ 	 	 
+ 	 }
+ 	 
+ 	 public static void main(String args[]){
+ 	 	 System.out.println("put in a number: ");
+ 	 	 try{
+ 	 	 	 BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+ 	 	 	 int as = Integer.parseInt(br.readLine());
+ 	 	 	 int x = t1(as);
+ 	 	 System.out.println(x);
+ 	 }catch(Exception e){e.printStackTrace();}
+ }
+ }

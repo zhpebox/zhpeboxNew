@@ -1,0 +1,87 @@
+
+class Ant{
+	int w = 0;
+	int d = 0;
+	Ant (int w ,int d){
+		this.w = w;
+		this.d = d;
+	}
+	public void move(){
+		if(d == 0){
+			this.w --;		//w++
+		}else{
+			this.w ++;
+		}
+	}
+	public void zhan(){
+		if(this.d == 0)
+			
+			this.d = 1;
+		else
+			this.d = 0;
+	}
+	public boolean over(){
+		
+		if(this.w == 0 || this.w == 27)
+			return false;
+		else
+		    return true;}
+}
+
+public class Jha{
+
+	public static void main(String args[]){
+		Ant[] a = new Ant[5];
+		for(int i = 0;i< 2;i++){
+			for(int j = 0;j< 2;j++){
+				for(int k = 0;k< 2;k++){
+					for(int m = 0;m< 2;m++){
+						for(int n = 0;n< 2;n++){
+				 a[0] = new Ant(3,i);
+				 a[1] = new Ant(7,j);
+				 a[2] = new Ant(11,k);
+				 a[3] = new Ant(17,m);
+				 a[4] = new Ant(23,n);
+				for(int p = 1;p<1000;p++){
+					for(int o = 0;o<5;o++){
+						if(a[o].over())
+						a[o].move();
+						
+					}
+					
+					if(a[0].w == a[1].w&& a[0].d == 1&&a[1].d == 0){
+						a[0].zhan();
+						a[1].zhan();	
+						}
+					if(a[1].w == a[2].w&& a[1].d == 1&&a[2].d == 0){
+						a[1].zhan();
+						a[2].zhan();	
+						}
+					if(a[2].w == a[3].w&& a[2].d == 1&&a[3].d == 0){
+						a[2].zhan();
+						a[3].zhan();	
+						}
+					if(a[3].w == a[4].w&& a[3].d == 1&&a[4].d == 0){
+						a[3].zhan();
+						a[4].zhan();	
+						}
+					
+					if(a[0].over()==false&&a[1].over()==false&&a[2].over()==false&&a[3].over()==false&&a[4].over()==false){
+						
+						System.out.println(p);
+						break;
+						
+						
+						}
+						
+				}
+		
+						
+		}
+		}
+		}
+		}
+		}
+		
+	}
+}

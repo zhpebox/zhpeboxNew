@@ -1,0 +1,54 @@
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+import java.io.*;
+
+public class Jha extends JPanel{
+	
+	public Jha(){
+	
+	ImageIcon icon = new ImageIcon("new.gif");
+	JTabbedPane tabbedPane = new JTabbedPane();
+	
+	Component panel1 = makeTextPanel("你好");
+	tabbedPane.addTab("One",icon,panel1,"Done nothing");
+	tabbedPane.setSelectedIndex(0);
+	
+	Component panel2 = makeTextPanel("Blah blah");
+	tabbedPane.addTab("Two",icon,panel2,"Does twice as much nothing");
+	
+	Component panel3 = makeTextPanel("Blah blah blah");
+	tabbedPane.addTab("Three",icon,panel3,"Still does nothing");
+	
+	Component panel4 = makeTextPanel("Blah blah blah blah");
+	tabbedPane.addTab("Four",icon,panel4,"Does nothing at all");
+	
+	//将标签面板添加到当前面板中
+	setLayout(new GridLayout(1,1));
+	add(tabbedPane);
+	
+	
+}
+	protected Component makeTextPanel(String text){
+		
+		JPanel panel =  new JPanel(false);
+		JLabel filler = new JLabel(text);
+		filler.setHorizontalAlignment(JLabel.CENTER);
+		
+		panel.setLayout(new GridLayout(1,1));
+		panel.add(filler);
+		return panel;
+		
+		
+		
+		}
+	public static void main(String args[]){
+		
+		JFrame f = new JFrame("TabbedPanDemn");
+		f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		f.getContentPane().add(new Jha(),BorderLayout.CENTER);
+		f.setSize(400,125);
+		f.setVisible(true);
+		
+		}
+}

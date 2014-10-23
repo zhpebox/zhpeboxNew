@@ -1,0 +1,31 @@
+import java.io.*;
+class Bing{
+
+	int h ;
+	Bing(int a ){
+		h = a ; 
+	}
+	int  jump(int a){
+		return a/2;
+	}
+}
+
+public class Jha{
+
+	public static void main(String args[])  throws IOException{
+		int s = 0;
+		BufferedReader br =  new BufferedReader(new InputStreamReader(System.in));
+		System.out.println("输入初始高度：");
+		int high = Integer.parseInt(br.readLine());
+		System.out.println("输入落地次数：");
+		int times = Integer.parseInt(br.readLine());
+		
+		Bing a = new Bing(high);
+		while(times>0){
+			s += a.h; 
+			a.h = a.jump(a.h);
+			times--;
+		}
+		System.out.println("小球总共走了 "+s+" 米的路程");
+	}
+}

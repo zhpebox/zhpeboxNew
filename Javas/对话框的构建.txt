@@ -1,0 +1,31 @@
+import java.awt.*;
+import javax.swing.*;
+
+public class Jha{
+
+	public static void main(String args[]){
+	
+		JFrame f = new JFrame("鹏鹏");
+		f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		JDialog d = new JDialog(f,"我爱你",false);		//Didlog的构建必须标明属于哪个框架，名称，
+									//是 有/无 模式对话框
+	
+		Panel p = new Panel();
+		p.setLayout(new GridLayout(1,2));
+		p.add(new Button("YES"));
+		p.add(new Button("NO"));
+		
+		d.add(p,"South");
+		d.add(new Label("Do you like JAVA?"),"Center");
+		
+		d.setBounds(200,300,200,200);
+		f.setBounds(150,150,200,200);
+		
+		d.setBackground(Color.gray);
+		f.setBackground(Color.red);
+		
+		d.setVisible(true);
+		f.setVisible(true);
+	}
+}

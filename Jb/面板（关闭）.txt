@@ -1,0 +1,51 @@
+import java.awt.*;
+import javax.swing.*;
+public class Jha{
+	
+	public static void main(String args[]){
+		
+		JFrame F = new JFrame("HEllo");
+		F.setSize(300,400);
+		F.setLayout(new FlowLayout());
+	//	F.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		F.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		Label name = new Label("name");
+		TextField nameT = new TextField();
+		
+		
+		Label pass = new Label("pass");
+		TextField passT = new TextField();
+		passT.setEchoChar('*');
+		
+		Choice sex = new Choice();
+		sex.add("boy");
+		sex.add("girl");
+		Panel pa = new Panel();
+		pa.add(new Label("sex"));
+		pa.add(sex);
+		
+		CheckboxGroup degree = new CheckboxGroup();
+		Panel pb = new Panel();
+		pb.add(new Label("degree"));
+		pb.add(new Checkbox("初中",degree,true));
+		pb.add(new Checkbox("高中",degree,false));
+		pb.add(new Checkbox("大学",degree,false));
+		
+		Panel pc = new Panel();
+		pc.add(new Label("language"));
+		pc.add(new Checkbox("java"));
+		pc.add(new Checkbox("C++"));
+		pc.add(new Checkbox("VB"));
+		
+		F.add(name);
+		F.add(nameT);
+		F.add(pass);
+		F.add(passT);
+		F.add(pa);
+		F.add(pb);
+		F.add(pc);
+		
+		F.setVisible(true);
+		}	
+}

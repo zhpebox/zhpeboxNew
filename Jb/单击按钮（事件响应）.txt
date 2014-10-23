@@ -1,0 +1,29 @@
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+
+public class Jha{
+	
+public static void main(String args[]){
+	
+	JFrame F = new JFrame("Text");
+	F.setSize(200,100);
+	F.setLayout(new FlowLayout(FlowLayout.CENTER));
+	F.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	
+	JButton b = new JButton("Press me");
+	b.addActionListener(new ButtonHandler());
+	F.add(b);
+	F.setVisible(true);
+	
+	}
+}
+
+class ButtonHandler implements ActionListener{
+	
+	public void actionPerformed(ActionEvent e){
+		System.out.println("Action");
+		System.out.println("Button'label is :"+e.getActionCommand());
+		}
+	
+}

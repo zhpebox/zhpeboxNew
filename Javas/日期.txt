@@ -1,0 +1,31 @@
+win + x :ÒÆ¶¯ÖÐÐÄ
+import java.io.*;
+import java.text.*;
+import java.util.*;
+public class Jha{
+
+	public static void main(String args[])throws Exception{
+		long d1 = new Date().getTime();
+		Date d2 = new Date();
+		DateFormat f = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss SSS");
+		String str = f.format(d1);
+		
+		
+		System.out.println(str);
+		
+		System.out.println(d2);
+		
+		System.out.println(d1);
+		
+		
+		Date d3 = f.parse("08/08/2008 20:00:00 000");
+		System.out.println(d3.getTime());
+		
+		
+		//caleander
+		Calendar c = Calendar.getInstance();
+		c.set(Calendar.YEAR,3000);
+		c.add(Calendar.YEAR,10);
+		System.out.println("d==="+c.get(Calendar.YEAR)+"  "+(c.get(Calendar.MONTH)+1));
+	}
+}

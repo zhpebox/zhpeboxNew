@@ -1,0 +1,44 @@
+/**
+	用链表是先一个长整数，每个节点代表一个数位
+*/
+
+import java.io.*;
+class A{
+	int num ;
+	 A next = null;
+	 A(){}
+	 A(int a){
+	 	 num = a;
+	 }
+	 A(int a,A m){
+	 	 num = a;
+	 	 next = m;
+	 }
+}
+public class Jha{
+	public static void main(String args[]){
+		try{
+			BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+			
+			A s = new A();
+			A z =  new A(3,s);
+			
+			int a = Integer.parseInt(br.readLine());
+			while(a!=0){
+				 
+				A m = new A(a,z.next);
+				a = Integer.parseInt(br.readLine());
+				z.next = m;
+				
+			}
+			while(z.next != null){
+				System.out.println(z.num);
+				z = z.next;
+			}
+			
+		}catch(Exception e){e.printStackTrace();}
+		
+		
+		
+	}
+}

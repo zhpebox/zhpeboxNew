@@ -1,0 +1,21 @@
+
+public class jjj {
+		public  int x=1;
+		public  jjj(int x)
+		{
+			this.x=x;
+			}
+		public jjj(){}
+		public void set()
+		{	System.out.println(x);
+			}
+
+
+		public static void main(String[] args) {
+			jjj a=new jjj();
+			a.set();
+			a=new jjj(99);
+			a.set();
+
+}
+}

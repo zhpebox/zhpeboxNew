@@ -1,0 +1,34 @@
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+
+public class Jha{
+
+	public static void main(String args[]){
+		JFrame f = new JFrame("TestButton");			//创建JFrame窗口
+		f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		Button b =  new Button("Press Me");			//创建按钮 b （即事件源对象）
+		Button c =  new Button("Cancel");			//创建按钮 c （即事件源对象）
+		ButtonTest bt =  new ButtonTest();			//创建监听器对象
+		b.addActionListener(bt);				//向事件源 b 注册监听器
+		c.addActionListener(bt);				//向事件源 c 注册监听器
+		f.add(b,BorderLayout.WEST);				//将按钮 b 加入到容器的指定西区位置
+		f.add(c,BorderLayout.EAST);				//将按钮 c 加入到容器的指定东区位置
+		f.setSize(200,100);
+		f.setVisible(true);
+		
+	}
+}
+
+class ButtonTest implements ActionListener{				//设置事件监听器类，实现监听器接口
+
+	public void actionPerformed(ActionEvent e){			//处理事件的方法
+	
+		if(e.getActionCommand()=="Press Me")			// b 按钮按下
+			JOptionPane.showMessageDialog(null,"Button has been pressed!");//显示提示消息对话框
+		if(e.getActionCommand()=="Cancel")			// c 按钮按下
+			System.exit(0);					// 退出窗口
+		
+	}
+}

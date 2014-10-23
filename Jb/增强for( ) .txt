@@ -1,0 +1,27 @@
+
+public class Jha{
+	
+	public static void main(String args[]){
+		int a[] = new int[5];
+		int i= 0;
+		while(i<5)
+		{
+			a[i] = 2*i;
+			i++;
+		}
+	
+		for(int e:a)
+		{
+			System.out.println(e);	
+		}
+		String s[]={"Hello","MT","HEIHEI"};
+		s[0] = s[0] + "WE are";
+		for(String q:s)
+		{
+			System.out.println(q.toLowerCase());
+			}
+		
+		
+		}
+		
+}

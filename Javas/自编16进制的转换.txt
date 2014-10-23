@@ -1,0 +1,50 @@
+import java.io.*;
+public class Jha{
+	public void TT(int a){
+		if(a<=2){
+			System.out.println("该数不能分解");
+		}
+		int sun = a/16;
+		int yushu = a%16;
+		String str = "";
+		str = chan(yushu) + "";
+		
+		if(sun == 0){
+		System.out.print("16进制数=="+chan(yushu));
+		}
+		
+		else{
+		while(sun>0){
+			yushu = sun%16;
+			sun = sun/16;
+			
+			str = chan(yushu) + str;
+		}
+		System.out.print(str);
+	}
+	}	
+	public String  chan(int a ){
+		switch(a){
+		case 10:
+			return "A";
+		case 11:
+			return "B";
+		case 12:
+			return "C";
+		case 13:
+			return "D";
+		case 14:
+			return "E";
+		case 15:
+			return "F";
+		}
+		return a+"";
+	}	
+	public static void main(String args[])throws Exception{
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		int a = Integer.parseInt(br.readLine());
+		Jha m = new Jha();
+		m.TT(a);
+		
+	}
+}

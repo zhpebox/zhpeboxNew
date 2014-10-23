@@ -1,0 +1,37 @@
+
+import  java.awt.*;
+public class Text{
+	public static void main(String[] args) {
+		Frame  frame=new Frame("Test");
+	    frame.setSize(400,300);
+	    
+		frame .setLayout(new FlowLayout(FlowLayout.LEFT,20,50));
+		
+		Label  namelabel=new Label("name");
+		TextField  nameField =new  TextField();
+		
+		Label Prassworld =new Label(" Prassworld");
+		TextField   passwordField =new  TextField();
+		
+		passwordField.setEchoChar('*');
+		
+		Button  Okbutton = new Button ("ok");
+		Button  CancelButton= new Button("cancel");
+		
+		Panel p= new Panel();
+		p.add( new Label("Language"));
+		Choice Q = new Choice();
+		Q.addItem("java");
+		Q.addItem("Math");
+		Q.addItem("English");
+		p.add(Q);
+		
+        frame .add( namelabel);frame .add(nameField);
+		frame .add(Prassworld);	frame .add( passwordField);	
+		frame .add(Okbutton);frame .add(CancelButton);
+		frame .add(p);
+		
+	    frame .setVisible(true);
+	   
+	}	
+}

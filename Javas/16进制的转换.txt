@@ -1,0 +1,51 @@
+import java.io.*;
+public class Jha{
+	
+	public void t1(int a){
+		String str = "";
+		
+		int sun = a/16;
+		int yushu = a%16;
+		str = zhuzhi(yushu) +"";
+		if(sun == 0){
+			System.out.println("16进制=="+str);
+		}
+		else{
+		while(sun > 0){
+		
+			yushu = sun % 16;
+			sun = sun / 16;
+			
+			str = zhuzhi(yushu) + str; //倒叙输入
+		}
+		System.out.println("该数的16进制==" + str);
+		}
+	}
+		
+	public String zhuzhi(int a){
+		switch(a){
+		case 10:
+			return "A";
+		case 11:
+			return "B";
+		case 12:
+			return "C";
+		case 13:
+			return "D";
+		case 14:
+			return "E";
+		case 15:
+			return "F";
+		}	
+		return a+"";
+	}
+	
+	
+	public static void main(String args[]) throws Exception{
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		Jha a = new Jha();
+		System.out.println("输入一个数转换为 16 进制的数： ");
+		int m = Integer.parseInt(br.readLine());
+		a.t1(m);
+	}
+}

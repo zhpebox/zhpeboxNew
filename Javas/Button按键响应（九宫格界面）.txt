@@ -1,0 +1,32 @@
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+
+public class Jha{
+
+	public static void main(String args[]){
+	
+		JFrame f = new JFrame("TEST");
+		f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		f.setLayout(new GridLayout(3,3));
+		f.setBounds(200,200,300,300);
+		f.setBackground(Color.gray);
+		
+		for(int i = 1;i<10;i++){
+			Button a = new Button();
+			a.setLabel(""+i);
+			a.addActionListener(new Fn());
+			a.setActionCommand("You press Button is "+i);
+			f.add(a);
+		}
+		f.setVisible(true);
+	}
+}
+
+class Fn implements ActionListener{
+
+	public void actionPerformed(ActionEvent e){		//注意actionPerformed(ActionEvent e)中的action是小写的
+		String s = e.getActionCommand();
+		System.out.println(s);
+	}
+}

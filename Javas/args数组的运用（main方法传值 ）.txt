@@ -1,0 +1,29 @@
+public class Jha {
+
+	public static void main (String args[]){
+		if(args!=null && args.length>0){
+			for(String e:args){
+			System.out.println("我爱你 =  " + e);
+			}
+		}
+	}
+
+}
+
+
+/*输入方法（用args 数组）
+F:\jp>javac Jha.java
+
+F:\jp>java Jha  2 3 8 5   2 1
+sdfs = = 2
+sdfs = = 3
+sdfs = = 8
+sdfs = = 5
+sdfs = = 2
+sdfs = = 1
+
+F:\jp>java Jha  sdsdhiof abcdefg 124355
+sdfs = = sdsdhiof
+sdfs = = abcdefg
+sdfs = = 124355
+*/

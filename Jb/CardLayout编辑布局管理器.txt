@@ -1,0 +1,54 @@
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+
+public class Jha extends JFrame implements ActionListener{
+	
+	JPanel cards;
+	CardLayout CL =new CardLayout();
+	
+	Jha(){
+		setLayout(new BorderLayout());	//设置Frame为BorderLayout
+		//创建摆放"卡片切换"按钮，并添加到Frame中
+		JPanel cp = new JPanel();
+		JButton bt = new JButton("卡片切换");
+		bt.addActionListener(this);
+		cp.add(bt);
+		add("North",cp);
+		
+		//创建盛放多个卡片的Panel ，设置为CardLayout
+		
+		cards = new JPanel();
+		cards.setLayout(CL);
+		
+		//创建cards中的第一个Panel及其组件
+		JPanel p1 = new JPanel();
+		p1.add(new JButton("Button 1"));
+		p1.add(new JButton("Button 2"));
+		p1.add(new JButton("Button 3"));
+		
+		
+		//创建card的另一个Panel及其组件
+		JPanel p2 = new JPanel();
+		p2.add(new JTextField("TextField",20));
+		cards.add("Panel with Button",p1);
+		cards.add("Panel with TextField",p2);
+		
+		// 将cards放入Frame中
+		add("Center",cards);
+	}
+	//相应单机切换事件
+	public void actionPerformed(ActionEvent e){
+		CL.next(cards);
+		}
+		
+		public static void main(String args[]){
+			Jha w = new Jha();
+			w.setTitle("Heee wo are");
+			w.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+			w.pack();
+			w.setVisible(true);
+			
+			}
+	
+}

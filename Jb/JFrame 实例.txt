@@ -1,0 +1,23 @@
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+
+ 
+public class Jha{
+
+	public static void main(String args[]){
+		
+		JFrame.setDefaultLookAndFeelDecorated(true);
+		
+		JFrame F = new JFrame("Heel");
+		F.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		JLabel e = new JLabel("haha");
+		e.setPreferredSize(new Dimension(175,100));
+		F.getContentPane().add(e,BorderLayout.CENTER);
+	
+		F.pack();
+		F.setVisible(true);
+		}	
+
+}

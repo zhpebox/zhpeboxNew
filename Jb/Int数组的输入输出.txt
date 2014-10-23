@@ -1,0 +1,23 @@
+import java.io.*;
+public class Jha{
+
+	public static void main(String args[]){
+	
+		int a[] = new int[5];
+		try{
+			for(int i = 0;i<5;i++){
+			BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+			a[i] = Integer.parseInt(br.readLine());
+			
+			}
+			
+		}catch(Exception e){System.out.println(e.toString());}
+		System.out.print("ÄúÊäÈëÊý×éÎª£º \n");
+		for(int i = 0;i<5;i++){
+			System.out.print(a[i]+' ');}	// +¡® ¡¯Êä³ö×Ö·ûÂë
+		System.out.print("\n");	
+		for(int i = 0;i<5;i++){
+			System.out.print(a[i]+" ");}	// +¡° ¡±Êä³ö×Ö·û´®£¨Int£©
+	}
+	
+}

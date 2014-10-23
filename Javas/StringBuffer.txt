@@ -1,0 +1,13 @@
+public class Jha{
+
+	public static void main(String args[]){
+		String str = "123 ÖĞ¹ú nihao ";
+		StringBuffer b = new StringBuffer();
+		
+		b.append(str);
+		b.append("ÕÅÅô");
+		b.append("love");
+		
+		System.out.println("×Ö·û´®"+b.toString());
+	}
+}

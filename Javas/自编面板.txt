@@ -1,0 +1,67 @@
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+
+public class Jha{
+
+	public static void main(String args[]){
+	
+		JFrame f = new JFrame("张鹏");
+		
+		f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		f.setBounds(300,300,300,400);
+		f.setLayout(new FlowLayout());
+		f.setBackground(Color.gray);
+		
+		Panel a = new Panel();
+		a.add(new Label("名字"));
+		a.add(new TextField());
+		a.add(new Label("密码"));
+		TextField pass = new TextField();
+		pass.setEchoChar('*');
+		a.add(pass);
+		
+		Panel b = new Panel();
+		b.add(new Label("性别"));
+		Choice sex = new Choice();
+		sex.add("boy");
+		sex.add("gril");
+		sex.add("man");
+		sex.add("woman");
+		b.add(sex);
+		
+		Panel c = new Panel();
+		c.add(new Label("学历"));
+		CheckboxGroup de = new CheckboxGroup();
+		c.add(new Checkbox("高中",de,true));
+		c.add(new Checkbox("大专",de,false));
+		c.add(new Checkbox("本科",de,false));
+		c.add(new Checkbox("研究生",de,false));
+		
+		Panel d = new Panel();
+		d.add(new Label("技能"));
+		d.add(new Checkbox("Java"));
+		d.add(new Checkbox("C++"));
+		d.add(new Checkbox("VB"));
+		d.add(new Checkbox("VF"));
+		
+		Panel e = new Panel();
+		List l = new List(4,false);
+		l.add("比尔盖茨");
+		l.add("比尔");
+		l.add("盖茨");
+		l.add("李彦宏");
+		l.add("马化腾");
+		e.add(new Label("目标"));
+		e.add(l);
+		
+		f.add(a);
+		f.add(b);
+		f.add(c);
+		f.add(d);
+		f.add(e);
+		f.setVisible(true);
+		
+		
+	}
+}

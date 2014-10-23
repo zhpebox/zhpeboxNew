@@ -1,0 +1,53 @@
+public class Jha{
+	public static int[] a ={12,4,3,56,8,84,16};
+	public static int[] ms =new int[a.length];
+//	public static 
+	public static void t1(int low,int high){
+		
+		if(low < high){
+			int mid = (low + high)/2;
+			t1(low,mid);
+			t1(mid+1,high);
+			t2(low,mid,high);
+		}
+	}
+	
+	public static void t2(int low,int mid,int high){
+		int i = low;
+		int j = mid +1;
+		int b = low ;
+		while(i<=mid && j <=high){
+			if(a[i]<=a[j]){
+				ms[b] = a[i];
+				i++;
+			}else{
+				ms[b] = a[j];
+				j++;
+			}b++;
+		}
+		while(i<=mid){
+			
+				ms[b] = a[i];
+				b++;i++;
+			
+		}
+		while(j<=high){
+			
+				ms[b] = a[j];
+				b++;j++;
+			
+		} 
+		System.arraycopy(ms,low,a,low,high-low+1);
+		for(int e:ms){
+			System.out.println(e);
+		}
+	
+	}
+	public static void main(String args[]){
+		t1(0,6);
+		System.out.println();
+		for(int e:ms){
+			System.out.println(e);
+		};
+	}
+}

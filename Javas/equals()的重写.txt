@@ -1,0 +1,15 @@
+public boolean equals(Object obj){
+
+	if(this == obj){			//是否是同一个对象
+		return true;
+	}	
+	if(obj instanceof Test){		//是否是属于同一个类
+		Test t =(Test) obj;			
+		if(this.b != t.b){
+			return false;
+		}
+		else 
+			return true;
+	}
+	return false;
+}

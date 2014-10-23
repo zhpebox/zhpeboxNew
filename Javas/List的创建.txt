@@ -1,0 +1,23 @@
+import java.awt.*;
+import javax.swing.*;
+
+public class Jha{
+
+	public static void main(String args[]){
+	
+		JFrame f = new JFrame ("计算机课程");
+		f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		f.setBounds(300,300,200,150);
+		
+		String s[] = {"电子商务","数据结构","组成原理","系统结构","英语","现代","大物","高数"};
+		
+		List l = new List(3,true);			// 创建List,显示3个项目
+		for(int i = 0;i<s.length;i++){
+			l.add(s[i]);
+		}
+		l.add("JAVA程序设计",2);		//加入一项放在第三的位置
+		f.add(l);
+		f.setVisible(true);
+		
+	}
+}

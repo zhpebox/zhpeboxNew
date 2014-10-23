@@ -1,0 +1,27 @@
+import java.io.*;
+public class Jha{
+
+	public static void main(String args[])throws Exception{
+		
+		BufferedReader nb = new BufferedReader(new InputStreamReader(System.in));
+		System.out.println("输入两个字符，求其二进制异或");
+		System.out.println("输入字符为（连续输入）：");
+		char c = (char)nb.read();
+		char w = (char)nb.read();
+		int x = 1;
+		
+		int  s = c^w; 
+		
+		System.out.println("第一列为字符 "+c+" ,第二列为字符 "+w+" 第三列为异或码： ");
+		for(int i = 0;i<16;i++){
+			int bit = (s>>>i)&x;
+			int br = (c>>>i)&x;
+			int bs = (w>>>i)&x;
+			
+			System.out.print(br);
+			System.out.print(bs);
+			System.out.println(bit);
+		}
+		
+	}
+}

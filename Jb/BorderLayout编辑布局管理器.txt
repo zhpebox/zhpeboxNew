@@ -1,0 +1,25 @@
+import java.awt.*;
+import javax.swing.*;
+
+public class Jha extends JFrame{
+	
+	Jha(){
+		setLayout(new BorderLayout());
+		
+		add(new JButton("North"),"North");
+		add(new JButton("south"),"South");
+		add(new JButton("East"),"East");
+		add(new JButton("West"),"West");
+		add(new JButton("Center"),"Center");
+		}
+		
+		public static void main(String args[]){
+			Jha w = new Jha();
+			w.setTitle("Heee wo are");
+			w.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+			w.pack();
+			w.setVisible(true);
+			
+			}
+	
+}

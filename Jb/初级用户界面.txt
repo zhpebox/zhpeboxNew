@@ -1,0 +1,26 @@
+import java.awt.*;
+import java.awt.*;
+public class asdff {
+	
+public static void main(String[] args) {
+		Frame F = new Frame("Text");
+		F.setSize(400,300);
+	    F.setLayout(new GridLayout(3,2));
+		Label nameLabel = new Label("name");
+		TextField nameText = new TextField(); 
+		Label pass = new Label("password");
+		TextField passT = new TextField();
+		passT.setEchoChar('*');
+		Button OKButton = new Button("OK");
+		Button cancle = new Button("cancel");
+		
+		F.add(nameLabel);
+		F.add(nameText);
+		F.add(pass);
+		F.add(passT);
+		F.add(OKButton);
+		F.add(cancle);
+		F.setVisible(true);
+	//	System.exit(0);
+	}	
+}

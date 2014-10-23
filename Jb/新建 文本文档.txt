@@ -1,0 +1,52 @@
+import java.awt.*;
+public class picture {
+	
+ 
+	public static void main(String[] args) 
+	{
+	Frame frame=new Frame();
+	frame.setSize(400,300);
+	frame.setLayout(new GridLayout(10,10));
+	Panel p1=new Panel();
+	 p1.add(new Label("name:"));
+	 Panel p11=new Panel();
+	TextField NField=new TextField();
+	p11.add(NField);
+	p1.add(p11);
+	frame.add(p1);
+
+	Panel p2=new Panel();
+	p2.add(new Label("sex:"));
+	Panel p22=new Panel();
+	Choice sex=new Choice();
+	sex.addItem("male");
+	sex.addItem("female");
+	p22.add(sex);
+	p2.add(p22);
+	frame.add(p2);
+	Panel p3=new Panel();
+	p3.add(new Label("degree:"));
+	Panel p33=new Panel();
+	CheckboxGroup group=new CheckboxGroup();
+	p33.add(new Checkbox("primary",group,true));
+	p33.add(new Checkbox("middle",group,false));
+	p33.add(new Checkbox("college",group,false));
+	p3.add(p33);
+	frame.add(p3);
+	Panel p4=new Panel();
+	p4.add(new Label("language:"));
+	Panel p44=new Panel();
+	p44.add(new Checkbox("java"));
+	p44.add(new Checkbox("c++"));
+	p44.add(new Checkbox("c"));
+	p4.add(p44);
+	frame.add(p4);
+	Button OK=new Button("OK");
+	Button CANCEL=new Button("cancel");
+	Panel p5=new Panel();
+	p5.add(OK);
+	p5.add(CANCEL);
+	frame.add(p5);
+		frame.setVisible(true);	 	 
+	}	
+}

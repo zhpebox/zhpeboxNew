@@ -1,0 +1,169 @@
+  　Windows键 + Space空格键：可以将当前的窗口透明化，松手就还原啦！
+
+　　Windows键 + 方向键：↑将窗口最大化；↓将窗口最小化；左右方向分别是将窗口靠到桌面的左右侧，并将窗口自动对半占据。
+
+　　Windows键 + P键：视频输出设定（主要有四个功能：仅电脑屏幕、同步显示、桌面延伸、仅外设显示屏幕）
+
+　　微软键 + Tab：打开3D任务切换功能，这是自己最喜欢的一个Windows7功能，真的太炫了…有木有！
+
+	alt + enrter :查看属性  
+
+
+给宽带加速，一分钟学会释放电脑保留的20%宽带资源 
+1、单击“开始——运行”，输入gpedit.msc回车后即可打开“组策略对象编辑器”。
+2、展开“计算机配置——管理模板——网络——QoS数据包计划程序”，双击右面设置栏中的“限制可保留带宽”，在打开的属性对话框中的“设置”选项卡中将“限制可保留带宽”设置为“已启用”，然后在下面展开的“带宽限制（％）”栏将带宽值“20”设置为“0”即可。
+3、修改完之后，我们可以重新打开IE浏览器或者用BT或者迅雷下载文件，发现上网和下载的速度是不是明显提升了？一个字爽啊。
+4、此项修改对XP和VISTA均有效
+
+1.文件的读取，
+2.监听器的注册和使用 //a.addActionLiseter(实例对象);
+		     //a.setActionCommand("响应的命令");
+			
+	创建监听类：
+			class Fn implements ActionListener{		//通过继承接口（ActionListener）创建监听类
+
+			public void actionPerformed(ActionEvent e){	//重写actionPerformand()
+				
+				String s = e.getActionCommand();
+				System.out.println();
+			}
+			
+		}
+
+
+
+3.文件的读写
+		while(input.available()>0)		//available()
+				{	int value = input.read();
+					output.write(value);
+					} 
+
+	计时器： long c = System.currentTimeMillis();
+
+	数组的读写：while(in.available()>0){
+			byte[] Buff = new byte[4096];
+			int value = in.read(Buff);
+			out.write(Buff,0,value);
+			}
+
+	带缓冲流的必须有close()才能写入
+		BufferedInputStream input = new BufferedInputStream(in);
+		BufferedOutputStream output = new BufferedOutputStream(out);
+
+		input.close();						//加了Buffer缓冲流必须带close（）才能写入
+		output.close();
+
+
+
+4.想文本框中传值
+	public void actionPerformed(ActionEvent e){
+			topTextArea.append(e.getActionCommand()+"\n");   	//向文本框中传值
+		}
+
+5.关闭窗口的两种方法
+
+	（1）,//向窗口注册响应关闭窗口操作的监听器
+			addWindowListener(new WindowAdapter(){
+			
+			public void windowClosing(WindowEvent e){
+					System.exit(0);
+					
+				}
+			});
+	（2）,//设置组件功能,通过对象调用
+			f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+6/ 内存分配，
+	初始化类，先初始化父类。 23 节
+	初始化类，先初始化其属性
+
+7.视频23，24,25
+
+8.一维数组的二维元素  = 三维数组
+	int[][] a[] = new int[2][3][4];
+
+9.算法排序 28
+
+10.对于String File Date 的equals的已经被重写，比较的是值，不是地址
+	基本 数据 ==
+	引用类型 equals
+	&&	a. equals()方法只能比较引用类型，“==”可以比较引用类型及基本类型
+		b. 默认的equals()方法比较的是内存地址，基本等同于“==”，但对类 File，String
+			,Date及包装类来说，比较的是值而不是内存地址
+		c.“==”进行比较的时候，引用类型数据比较的是引用，即内存地址，基本数据类型比较的是数值
+11.重写equals()
+	第一步：是否是同一个实例
+	第二步：是不为空（null）
+	第三步：instanceof 是否为同一类型
+	第四步：类型相同，想转换为同一个类型
+	第五步：比较对象属性
+
+12.hashCode   方法
+	
+13.时间日期37，38
+
+14.异常的捕获与处理
+
+	try{
+
+	}catch(Exception e){ e.printStackTrace();} 	//程序员常用它（跟踪堆栈）打印出错误信息
+
+15.倒油问题 44 (Myset 39)
+
+·CPU：中央处理器Central Processing Unit 
+·CPU Fan：中央处理器的“散热器”(Fan) 
+·MB：主机板MotherBoard 
+·RAM：内存Random Access Memory，以PC-代号划分规格，如PC-133，PC-1066，PC-2700 
+·HDD：硬盘Hard Disk Drive 
+·FDD：软盘Floopy Disk Drive 
+·CD-ROM：光驱Compact Disk Read Only Memory 
+·DVD-ROM：DVD光驱Digital Versatile Disk Read Only Memory 
+·CD-RW：刻录机Compact Disk ReWriter 
+·VGA：显示卡(显示卡正式用语应为Display Card) 
+·AUD：声卡(声卡正式用语应为Sound Card) 
+·LAN：网卡(网卡正式用语应为Network Card) 
+·MODM：数据卡或调制解调器Modem 
+·HUB：集线器 
+·WebCam：网络摄影机 
+·Capture：影音采集卡 
+·Case：机箱 
+·Power：电源 
+·Moniter：屏幕，CRT为显像管屏幕，LCD为液晶屏幕 
+·USB：通用串行总线Universal Serial Bus，用来连接外围装置 
+·IEEE1394：新的高速序列总线规格Institute of Electrical and Electronic Engineers 
+·Mouse：鼠标，常见接口规格为PS/2与USB 
+·KB：键盘，常见接口规格为PS/2与USB 
+·Speaker：喇叭 
+·Printer：打印机 
+·Scanner：扫描仪
+·UPS：不断电系统 
+·IDE：指IDE接口规格Integrated Device 
+Electronics，IDE接口装置泛指采用IDE接口的各种设备
+
+16 , 蚂蚁 19，25
+17,  算法 27 （排序，二分法查找 较重要）
+18，String的一些方法 33(较重要)
+19, 日期，日历，38，39
+
+20,Scanner 输入法
+	import java.util.*;
+public class Jha{
+	
+	public static void main(String args[])throws Exception{
+		//引入输入接口Scanner
+		Scanner an = new Scanner(System.in);
+		//得到字符串
+		String s = an.nextLine();
+		//得到整形数组
+		int a = an.nextInt();
+		System.out.println(s);
+		System.out.println(a);
+	}
+}
+
+21,利用节点形式实现链表
+	class Node{
+		int num;
+		Node next;
+
+	}

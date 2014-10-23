@@ -1,0 +1,33 @@
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+
+class Jf implements ActionListener{
+
+	public void actionPerformed(ActionEvent e){
+	
+		String s = e.getActionCommand();
+		System.out.println(s);
+	}
+}
+
+public class Jha{
+
+	public static void main(String args[]){
+		JFrame f = new JFrame("My lover");
+		f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		f.setBounds(200,200,300,300);
+		f.setLayout(new BorderLayout());
+		f.setBackground(Color.gray);
+		final TextArea t = new TextArea();
+		
+		Button b = new Button();
+		b.setLabel("√ÿ√‹");
+		b.addActionListener(new Jf());
+		b.setActionCommand("Œ“∞Æƒ„");
+		
+		f.add(b,"North");
+		f.add(t,"Center");
+		f.setVisible(true);
+	}
+}

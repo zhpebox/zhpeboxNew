@@ -1,0 +1,54 @@
+import java.io.*;
+import java.net.*;
+public class Jha {
+
+	public static void main(String[] args) {
+	
+	 try{
+	 	
+	 	Socket S = new Socket("localhost",900);
+	 	FileInputStream in = new FileInputStream("c:\\a.txt");
+	 	byte[] Buffer = new byte[4096];
+	 	while(in.available()>0)
+	 	{
+	 		int len =in.read(Buffer);
+	 		S.getOutputStream().write(Buffer,0,len);
+	 	}
+	 	S.close();
+	 	
+	 	
+	 	}catch(Exception e){
+	 		System.out.println(e.toString());
+	 		}
+	 		
+		
+	}	
+}
+
+
+import java.io.*;
+import java.net.*;
+public class Server {
+
+	public static void main(String[] args) {
+		try{
+		
+		ServerSocket Ser = new ServerSocket(900);
+		Socket Cli = Ser.accept();
+		
+		FileOutputStream out = new FileOutputStream("D:\\b.txt");
+		byte[] buffer = new byte[4096];
+		while(Cli.getInputStream().available()>0)
+		{
+			int len = Cli.getInputStream().read(buffer);
+			out.write(buffer,0,len);	
+		}
+		out.close();
+		Cli.close();
+		Ser.close();}catch(Exception w){System.out.print(w.toString());
+		}
+	}	
+}
+
+
+

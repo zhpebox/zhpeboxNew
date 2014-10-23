@@ -1,0 +1,34 @@
+public class Jha{
+	public static void main(String args[]){
+		
+		int  数组[] = new int[10];
+		int i,max,min;
+		
+		for(i=0;i<数组.length;i++)
+			数组[i] = (int)(Math.random()*100);
+			
+		System.out.println("随机数组为：");
+		
+		for(i=0;i<数组.length;i++)
+		{	if(i>0)
+			System.out.print("-");
+			System.out.print(数组[i]);
+		}
+		
+		System.out.println();
+		
+		max = 数组[0];
+		min = 数组[0];
+		
+		for(i=0;i<数组.length;i++)
+		{
+			if(数组[i]>max)
+					max = 数组[i];
+			if(数组[i]<min)
+					min = 数组[i];
+		}
+		
+		System.out.println("最大值为： "+max);
+		System.out.println("最小值为： "+min);
+	}
+}

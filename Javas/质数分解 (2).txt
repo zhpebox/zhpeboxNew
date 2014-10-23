@@ -1,0 +1,37 @@
+
+public class Jha{
+	public static void main(String args[]){
+		int x = 91;
+		int k = 2;
+		while(x>k){
+			if(x % k == 0){
+				x/= k;
+				System.out.print(k+"*");
+			}
+			if(x % k != 0){
+				k++;
+			}
+		
+		}
+		System.out.println(k);
+	}
+}
+
+
+/**
+public static void main(String[] args) {
+        int num = 90;
+        int k = 2;
+        System.out.print(num + "=");
+        while (num > k) {
+            if (num % k == 0) {
+                System.out.print(k + "¡Á");
+                num = num / k;
+            }
+            if (num % k != 0) {
+                k++;
+            }
+        }
+        System.out.println(k);
+    }
+*/

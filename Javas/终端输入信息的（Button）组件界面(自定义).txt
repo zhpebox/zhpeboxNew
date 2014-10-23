@@ -1,0 +1,44 @@
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+import java.io.*;
+
+public class Jha{
+	
+	public static void main(String args[]) throws Exception{
+	
+		JFrame f = new JFrame("新视野");
+		f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		f.setBounds(200,200,200,200);
+		f.setBackground(Color.gray);
+		
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		System.out.println("Put in the number of this JFrame'Button");
+		int num = Integer.parseInt(br.readLine());
+		Panel p = new Panel();
+		p.setLayout(new GridLayout(num,1));
+		for(int i = 0;i<num;i++){
+			System.out.println("Please put in the NO."+i+" Button's name: ");
+			String s = br.readLine();				//输入Button名称
+			Button a = new Button();
+			a.setLabel(s);						//设置名称
+			a.addActionListener(new Fn());				//将组建注册给监听器（new监听器对象）
+			System.out.println("And put in the NO."+i+" Button's value: ");
+			a.setActionCommand(br.readLine());			//输入此Button的操作符命令
+			p.add(a);
+		}
+		System.out.println("\nYou have put in all things, so let's begin:\n");
+		f.add(p);
+		f.pack();			//自动布局方式
+		f.setVisible(true);
+		
+	}
+}
+
+class Fn implements ActionListener{				//创建监听器类
+
+	public void actionPerformed(ActionEvent e){
+		String s = e.getActionCommand();
+		System.out.println(s);
+	}
+}

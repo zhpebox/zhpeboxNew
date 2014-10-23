@@ -1,0 +1,33 @@
+//int ,String ,char 的不同终端输入方法，其中char有两种方法输入System.in.raed() 和 bufferedreader read() 
+import java.io.*;
+public class Ha{
+	public static void main(String args[]){
+		try{
+			BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+			
+			System.out.println();
+			System.out.println("Plese put a number");
+			int a = Integer.parseInt(br.readLine());
+			
+			System.out.println();
+			System.out.println("Plese put a String");
+			String s = br.readLine();
+			
+			System.out.println();
+			System.out.println("Plese put a char ");
+			char c1 = (char)br.read();
+			
+			System.out.println();
+			System.out.println("Plese put a char again");
+			char c2 = (char)System.in.read();
+			
+			System.out.println();
+			System.out.println("  \nthe number is \n  "+a);
+			System.out.println(" \nthe String is \n  "+s);
+			System.out.println(" \nthe 1 char is \n  "+c1);
+			System.out.println(" \nthe 1 char is \n  "+c2);
+		}catch(Exception e ){}
+		
+	}
+}
+

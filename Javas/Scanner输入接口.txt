@@ -1,0 +1,14 @@
+import java.util.*;
+public class Jha{
+	
+	public static void main(String args[])throws Exception{
+		//引入输入接口Scanner
+		Scanner an = new Scanner(System.in);
+		//得到字符串
+		String s = an.nextLine();
+		//得到整形
+		int a = an.nextInt();
+		System.out.println(s);
+		System.out.println(a);
+	}
+}

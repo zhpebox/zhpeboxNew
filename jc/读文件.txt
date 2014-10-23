@@ -1,0 +1,13 @@
+import java.io.*;
+
+public class test{
+	
+	public static void main(String args[])throws Exception{
+		FileInputStream in = new FileInputStream("F:/as.txt");
+		byte bs[] = new byte[in.available()];
+		in.read(bs);
+		String s = new String(bs);
+		System.out.println(s);
+	}
+	
+}

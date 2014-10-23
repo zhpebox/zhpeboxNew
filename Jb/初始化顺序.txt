@@ -1,0 +1,21 @@
+import java.io.*;
+public class jjj {
+	int x=1;
+	int y=f();
+	int f(){
+			System.out.println(x);
+			System.out.println("ÄãºÃ");
+			System.out.println(y);
+			return 10;
+		}
+
+	jjj()
+	{	System.out.println(x);
+		System.out.println(y);
+		}
+
+
+	public static void main(String[] args) {
+	 jjj a=new jjj();
+}
+}

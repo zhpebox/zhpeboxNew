@@ -1,0 +1,24 @@
+import java.io.*;
+public class Jha{
+	public static void main(String args[]){
+	int i, n =4, max = 0,min = 0,temp = 0;
+	try{
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		max = min = Integer.parseInt(br.readLine());
+	//	br.close();
+	}catch(Exception e){}
+	for(i=2;i<=n;i++){
+		try{
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		temp = Integer.parseInt(br.readLine());
+	//	br.close();
+		if(temp > max)max = temp;
+		if(temp < min)min = temp;
+		
+		}catch(Exception e){}
+		System.out.println("max = "+max+"\nmin = "+min);
+		
+	}
+
+}
+}

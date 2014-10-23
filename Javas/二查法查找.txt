@@ -1,0 +1,42 @@
+/**
+	用二查法查点非递减数列中的某数
+*/
+import java.io.*;
+public class Jha{
+	public static  int[] bao = {12,54,67,99,123,999,7012};
+	public static int s = 0;
+	public static int e = 6;
+	public static  void t1(int x){
+		int m = (s+e)/2;
+		if(s<=e){
+		if(x == bao[m]){
+			System.out.println("ture + "+x);
+		}
+		if(x < bao[m]){
+			e = m - 1;
+			t1(x);
+		}
+		if(x > bao[m]){
+			s = m + 1;
+			t1(x);
+		}
+		}else{
+			System.out.println("wrong");
+		}
+	}
+	
+	public static void main(String args[]){
+		System.out.println("目标数组为 ");
+	
+		for(int e : bao){
+			System.out.print(" "+e+" ");
+		}
+		System.out.println("\n请输入你所检索的数：");
+		try{
+			BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+			int xx = Integer.parseInt(br.readLine());
+			t1(xx);
+	}catch(Exception e){e.printStackTrace();}
+		
+	}
+}

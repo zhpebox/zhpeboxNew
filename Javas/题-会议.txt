@@ -1,0 +1,96 @@
+/*
+	参加会议：有人要邀请A，B，C，D，E，F 6个人参加一项会议，这6个人有要求，
+		1， A,B两人至少有一人参加会议
+		2， A，E，F 3人中有2个参加会议
+		3， B和C两人要不都不去，要不都去
+		4， A,D两人中只要1人参加
+		5， C,D两人中也只要1人参加会议
+		6， 如果D不去，那么E也不去
+		
+		求最后究竟谁去了？
+		
+	
+	
+
+*/
+public class Jha{
+	public static void main(String args[]){
+		Jha.t1();
+	}
+	
+	private static void t1(){
+		for(int a1 = 1;a1<3;a1++){
+		for(int a2 = 1;a2<3;a2++){
+		for(int a3 = 1;a3<3;a3++){
+		for(int a4 = 1;a4<3;a4++){
+		for(int a5 = 1;a5<3;a5++){
+		for(int a6 = 1;a6<3;a6++){
+			if(
+			tm1(a1, a2 , a3, a4, a5, a6) 
+			&&tm2(a1, a2 , a3, a4, a5, a6) 
+			&&tm3(a1, a2 , a3, a4, a5, a6) 
+			&&tm4(a1, a2 , a3, a4, a5, a6) 
+			&&tm5(a1, a2 , a3, a4, a5, a6) 
+			&&tm6(a1, a2 , a3, a4, a5, a6) 
+			){
+				System.out.println(a1+" "+a2+" "+a3+" "+a4+" "+a5+" "+a6+"");
+			}
+		}
+		}
+		}
+		}
+		}
+		}
+		
+	}
+	
+private static int countGo(int ... as ){			//不定项参数
+	int sum = 0;
+	for(int e:as){
+		if(e==1)
+		sum++;
+	}
+	return sum;
+}
+private static boolean tm1(int a1,int a2 ,int a3,int a4,int a5,int a6) {
+	if(countGo(a1,a2)>0){
+		return true;
+	}
+	return false;
+}
+private static boolean tm2(int a1,int a2 ,int a3,int a4,int a5,int a6) {
+
+	if(countGo(a1,a5,a6)==2){
+		return true;
+	}
+	return false;
+}
+private static boolean tm3(int a1,int a2 ,int a3,int a4,int a5,int a6){
+	if(countGo(a2,a4)==0 || countGo(a2,a3)==2){
+		return true;
+	}
+	return false;
+}
+private static boolean tm4(int a1,int a2 ,int a3,int a4,int a5,int a6) {
+	if(countGo(a1,a4)==1){
+		return true;
+	}
+	return false;
+}
+private static boolean tm5(int a1,int a2 ,int a3,int a4,int a5,int a6) {
+	if(countGo(a3,a4)==1){
+		return true;
+	}
+	return false;
+}
+private static boolean tm6(int a1,int a2 ,int a3,int a4,int a5,int a6) {
+	if(countGo(a4)==0 ){
+		if(countGo(a5)==0)
+		return true;
+		else
+		return false;
+	}
+	return true;
+}
+
+}

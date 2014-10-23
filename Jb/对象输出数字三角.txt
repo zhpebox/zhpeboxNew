@@ -1,0 +1,39 @@
+/**
+*    1
+*   121
+*  12321
+* 1234321
+*123454321
+*/
+class line {
+	private int i = 0;
+	private int high = 0;
+	line(int i , int high ){
+		this.i = i;
+		this.high = high;
+		
+	}
+	public void Createline(){
+		for(int j = 0;j<high - i;j++){
+			System.out.print(' ');
+		}
+		for(int j = 1;j<=2*i-1;j++){
+			int k = j > i?2*i-j:j;
+			System.out.print(k);
+		}
+		System.out.println();
+	}
+}
+
+public class Jha{
+	public static void main(String args[]){
+		line[] m = new line[5];			//数组对象的建立
+		for(int s=0;s<5;s++){
+			m[s] = new line(s+1,5);
+			m[s].Createline();
+		/*	line ls = new line(s+1,5);
+			ls.Createline();
+		*/
+		}
+	}
+}

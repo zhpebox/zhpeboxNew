@@ -1,0 +1,26 @@
+
+public class Jha{
+
+	public static void main(String args[]){
+		int score = 0;
+		//if初始化c用的，但没有成功
+		if(args!=null){
+			 score = Integer.parseInt(args[0]);
+		}
+		
+		switch(score>=90? 1:score>=80? 'b':score>=70? 'c':score>=60? 'd':'e'){  //注意 字符 与 数字 的不同用法
+											  //字符必须加引号
+		case 1:
+			System.out.println("you number is "+score+" A ");break;
+		case 'b':
+			System.out.println("you number is "+score+" B ");break;
+		case 'c':
+			System.out.println("you number is "+score+" C ");break;
+		case 'd':
+			System.out.println("you number is "+score+" D ");break;
+		default:
+			System.out.println("you number is "+score+" E ");
+		}
+		
+	}
+}

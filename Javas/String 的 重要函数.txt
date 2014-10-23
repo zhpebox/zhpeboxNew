@@ -1,0 +1,37 @@
+
+public class Jha{
+	
+	public static void main(String args[])throws Exception{
+		String s =  "尼奥！aas";
+		//测试长度
+		int a = s.length();
+		System.out.println(a);
+		//取第二号字符
+		System.out.println(s.charAt(2));
+		//getBytes()将字符串改为byte数组（中文在双字节）
+		System.out.println(s.getBytes().length);
+		byte[] q = s.getBytes();
+		for(byte e : q){
+			System.out.print(e+" ");
+		}
+		System.out.println();
+		//toCharArray（）将此字符串转换为一个新的字符数组
+		char[] c = s.toCharArray();
+		/*
+			分清字符串中的字母，数字，汉字（汉字占两个byte）
+		*/
+		
+		for(char e : c){			
+			if((""+e).getBytes().length > (""+e).length()){
+				System.out.print("汉字 "+e);
+			}System.out.println();
+			 if((e>='a'&&e<='z')||(e>='A'&&e<='Z')){
+				System.out.println("字母 "+e);
+			}System.out.println();
+			 if(e>='0'&&e<='9'){
+				System.out.print("数字 " +e);
+			}
+			
+		}
+	} 
+}

@@ -1,0 +1,29 @@
+import java.io.*;
+public class Jha{
+	public int[] sz = new int[5];
+	
+	public int max(int x){
+		if(x < sz.length - 1){
+			int j =  max(x +1);
+			int mm = sz[x] > sz[j]?x:j;
+			return mm;
+		}
+		// 最后的不能为length，数组结构-1
+		return sz.length - 1;
+	}
+	
+	public static void main(String args[]){
+		//输入5个数，比较最大值的下标
+		try{ Jha hh = new Jha();
+			BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+			
+			for(int i = 0;i<hh.sz.length;i++){
+				hh.sz[i] = Integer.parseInt(br.readLine());
+			}
+			int ssx = hh.max(0);
+			System.out.println(ssx);
+			
+		}catch(Exception e){e.printStackTrace();}
+	
+	}
+}

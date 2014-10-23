@@ -1,0 +1,59 @@
+1、setResizable(false);//窗口大小不可调
+
+2、f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);//窗口关闭
+
+3、if(args!=null && args.length > 0){		length没有（）
+		
+			for(String e: args){
+			System.out.println(e);
+			}
+		}
+
+4、		f.setLayout(null);		
+		f.setBounds(60,60,100,100);	设置位置和大小
+		f.setBackground(Color.blue);   	设置背景颜色
+
+5、
+	public void actionPerformed(ActionEvent e){		
+		//注意actionPerformed(ActionEvent e)中的action是小写的
+		String s = e.getActionCommand();
+		System.out.println(s);
+	}
+6、
+	按值传递/按引用（地址）传递：
+				基本类型（包括String）按值传递
+				对象类型  传递	地址，指向同一片空间
+
+	总结：栈里数据不能改
+
+7、包装类：基本类型用类来表达，实现JAva的完全面向对象
+		char -> Character
+		int  -> Integer
+			  从一个基本类型变成了对象
+
+	**Java Platform Standard Edition 6 API 规范
+
+8、包装类的自动装包和解包
+	自动包装：就是把基础数据类型自动封装并转换成对应的包装类对象
+	自动解包：就是把包装类的对象自动解包并转换成对应的基础数据类型
+	
+		理论类型：Integer a3 = new Integer(3);
+			  int a4 = 5;		
+		
+		自动转换:
+		Integer a1 = 3;
+		int a2 = new Integer(5);
+		System.out.println("a1 = "+a1+",a2 = "+a2);	
+
+9、类型转化：
+		大的到小的	强制转换
+		小的到大的      自动升级 
+					
+
+10、继承初始化顺序
+		
+		
+		初始化子类，必先初始其父类
+		初始化一个类，必须先初始化其属性
+
+	同名覆盖

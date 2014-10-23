@@ -1,0 +1,17 @@
+
+import java.util.*;
+public class text{	
+public static void main(String[] args){
+    
+        ArrayList l=new ArrayList();
+        l.add("f"); l.add("b"); l.add("d"); l.add("c");
+        Comparator c=Collections.reverseOrder();
+         System.out.println(l);
+        Collections.sort(l,c);
+         System.out.println(l);
+        Collections.reverse(l);
+         System.out.println(l);
+        int index=Collections.binarySearch(l,"c");
+      Collections.fill(l,"ÄãºÃ");
+        System.out.println(l);}
+        }

@@ -1,0 +1,91 @@
+import java.io.*;
+import java.net.*;
+public class Jha{
+
+	public static void main(String args[]) {
+		try{
+			BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+			char c[] = new char[3];
+			for(int i = 0;i<c.length;i++){
+				c[i] = (char)br.read();
+			}
+			
+			Socket s =new Socket("localhost",700);
+			//char c[] = {'9','/','3'};
+			for(char e:c){
+				s.getOutputStream().write(e);
+			}
+			s.close();
+		}catch(Exception e){System.out.println(e.toString());}
+		
+	}
+	
+}
+
+
+
+
+import java.io.*;
+import java.net.*;
+public class Jhe{
+
+	public static void main(String args[]){
+			
+			int x=0;
+			int y=0;
+		try{
+			ServerSocket ser = new ServerSocket(700);
+			Socket cli = ser.accept();
+			int a[] = new int[3];
+			int i=0;
+			while(cli.getInputStream().available()>0){
+				a[i] = cli.getInputStream().read();
+				System.out.println((char)a[i]);
+				i++;
+			}
+			System.out.println("计算结果为：");
+			switch(a[0]){
+				case '1': x=1;break;
+				case '2': x=2;break;
+				case '3': x=3;break;
+				case '4': x=4;break;
+				case '5': x=5;break;
+				case '6': x=6;break;
+				case '7': x=7;break;
+				case '8': x=8;break;
+				case '9': x=9;break;
+				case '0': x=0;break;
+				
+				}
+			
+			switch(a[2]){
+				case '1': y=1;break;
+				case '2': y=2;break;
+				case '3': y=3;break;
+				case '4': y=4;break;
+				case '5': y=5;break;
+				case '6': y=6;break;
+				case '7': y=7;break;
+				case '8': y=8;break;
+				case '9': y=9;break;
+				case '0': y=0;break;
+				
+				}
+			
+			switch(a[1]){
+			case '+':
+				System.out.println(x+y);break;
+			case '-':
+				System.out.println(x-y);break;
+			case '*':
+				System.out.println(x*y);break;
+			case '/':
+				System.out.println(x/y);break;
+			    }
+			
+			
+			ser.close();
+			cli.close();
+		}catch(Exception e){System.out.println(e.toString());}
+	}
+}

@@ -1,0 +1,20 @@
+/*
+	÷ÿµ„
+	format
+	parse
+*/
+import java.util.regex.*;
+import java.util.*;
+import java.text.*;
+
+public class Jha{
+
+	public static void main(String args[]){
+	
+		Date d = new Date();
+		DateFormat df = new SimpleDateFormat("MM.dd.yyyy HH:mm:ss SSS");
+		String str = df.format(d);
+		
+		System.out.println("d=="+str);
+	}
+}

@@ -1,0 +1,23 @@
+import java.io.*;
+public class Jha{
+	
+	public static String t1(String s){
+		char[] c = s.toCharArray();
+		String su = "";
+		for(char e : c){
+			if((e+"").getBytes().length > (e+"").length() ){
+				System.out.println(e);
+				su += e;
+			}
+		}
+		return su;
+	}
+	public static void main(String args[]){
+		try{
+			BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+			String se = br.readLine();
+			System.out.println(t1(se));
+			
+		}catch(Exception e){ e.printStackTrace();}
+	}
+}

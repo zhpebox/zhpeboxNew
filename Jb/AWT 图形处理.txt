@@ -1,0 +1,20 @@
+import  java.awt.*;
+public class Tast {
+	public static void main(String[] args) {
+		Frame  frame=new Frame("Test");
+	    frame .setSize(400,300);
+		frame .setLayout(new GridLayout(5,2));
+		Label  namelabel=new Label("name");
+		TextField  nameField =new  TextField();
+		Label Prassworld =new Label(" Prassworld");
+		TextField   passwordField =new  TextField();
+		passwordField.setEchoChar('*');
+		Button  Okbutton =new Button ("ok");
+		Button  CancelButton=new Button("cancel");
+		frame .add( namelabel);frame .add(nameField);
+		frame .add(Prassworld);	frame .add( passwordField);	
+		frame .add(Okbutton);frame .add(CancelButton);
+	    frame .setVisible(true);
+	   // System.exit(0);
+	}	
+}
